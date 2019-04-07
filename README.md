@@ -13,6 +13,8 @@ and [nude.py].
 [nude.js]: https://github.com/pa7/nude.js
 [nude.py]: https://github.com/hhatto/nude.py
 
+![benchmark](docs/benchmark.png)
+
 We are currently going for an identical nudity detection algorithm, future
 versions may tweak parameters but due to the complexity of this topic we can't
 provide actual support for false positives or negatives. You are welcome to
