@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<body>
+<script src="nude.js"></script>
+<script>
+var todo = 4;
+
+function classify() {
+    return new Promise((resolve, reject) => {
+        nude.scan(x => {
+            resolve(x);
+        });
+    });
+}
+
+async function run() {
+    var imgs = document.getElementsByTagName('img');
+
+    var start = new Date();
+    for(var i=0; i<imgs.length; i++) {
+        var id = imgs[i].id;
+        console.log(id);
+
+        nude.load(id);
+        for(var j=0; j<10; j++) {
+            var r = await classify();
+        }
+    }
+    var end = new Date();
+    console.info('Execution time: %dms (%ds)', end - start, (end - start) / 1000)
+}
+
+function loaded() {
+    if(!--todo) {
+        console.log('all loaded');
+        run();
+    }
+}
+</script>
+
+<img id="img1" src="../data/damita.jpg" onload="loaded()">
+<img id="img2" src="../data/damita2.jpg" onload="loaded()">
+<img id="img3" src="../data/test2.jpg" onload="loaded()">
+<img id="img4" src="../data/test6.jpg" onload="loaded()">
+</body>
