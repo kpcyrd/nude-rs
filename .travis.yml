@@ -1,0 +1,14 @@
+language: rust
+
+matrix:
+  include:
+  - os: linux
+    rust: stable
+  - os: osx
+    rust: stable
+  - os: windows
+    rust: stable
+
+script:
+- cargo build --verbose --all
+- cargo test --verbose --all
