@@ -7,18 +7,18 @@
 //! println!("nudity={:?}", nudity);
 //! ```
 
-#[macro_use]
-extern crate log;
-
 use image::DynamicImage;
 use image::GenericImage;
 use image::GenericImageView;
-use image::Pixel as _;
+// Re-enable this after rust 1.33.0 is more common
+// https://github.com/kpcyrd/sn0int/issues/89
+// use image::Pixel as _;
+use image::Pixel as ImagePixel;
 use image::Primitive;
 use image::Rgb;
 use image::Rgba;
+use log::*;
 use rand::Rng;
-
 
 /// A classified pixel in an image
 #[derive(Debug, Clone)]
@@ -356,11 +356,7 @@ impl Analysis {
     /// ```
     #[inline]
     pub fn score(&self) -> f64 {
-        let nude = if self.nude {
-            1.0
-        } else {
-            0.0
-        };
+        let nude = if self.nude { 1.0 } else { 0.0 };
         nude + (self.skin_percent / 100.0)
     }
 }

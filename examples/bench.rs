@@ -1,11 +1,11 @@
 use std::env;
 use std::time::Instant;
 
-
 fn main() {
     env_logger::init();
 
-    let imgs = env::args().skip(1)
+    let imgs = env::args()
+        .skip(1)
         .map(image::open)
         .collect::<Result<Vec<_>, _>>()
         .expect("Failed to load images");
@@ -20,6 +20,9 @@ fn main() {
 
     let elapsed = start.elapsed();
 
-    println!("Execution time: {}ms ({}s)", elapsed.as_millis(), elapsed.as_secs());
-
+    println!(
+        "Execution time: {}ms ({}s)",
+        elapsed.as_millis(),
+        elapsed.as_secs()
+    );
 }
