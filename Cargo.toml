@@ -15,8 +15,8 @@ travis-ci = { repository = "kpcyrd/nude-rs" }
 [dependencies]
 failure = "0.1"
 log = "0.4"
-image = "0.21"
-rand = "0.6"
+image = "0.22"
+rand = "0.7"
 
 [dev-dependencies]
 env_logger = "0.6"

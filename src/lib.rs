@@ -321,7 +321,7 @@ impl Scan {
             let b: u8 = rng.gen();
 
             for px in region {
-                img.put_pixel(px.x, px.y, Rgba { data: [r, g, b, 0] });
+                img.put_pixel(px.x, px.y, Rgba([r, g, b, 0]));
             }
         }
     }
@@ -539,29 +539,19 @@ mod tests {
 
     #[test]
     fn test_classify_skin() {
-        let skin = classify_skin(Rgb {
-            data: [219, 191, 177],
-        });
+        let skin = classify_skin(Rgb([219, 191, 177]));
         assert!(!skin);
 
-        let skin = classify_skin(Rgb {
-            data: [223, 199, 187],
-        });
+        let skin = classify_skin(Rgb([223, 199, 187]));
         assert!(!skin);
 
-        let skin = classify_skin(Rgb {
-            data: [112, 110, 89],
-        });
+        let skin = classify_skin(Rgb([112, 110, 89]));
         assert!(!skin);
 
-        let skin = classify_skin(Rgb {
-            data: [175, 125, 102],
-        });
+        let skin = classify_skin(Rgb([175, 125, 102]));
         assert!(skin);
 
-        let skin = classify_skin(Rgb {
-            data: [127, 83, 58],
-        });
+        let skin = classify_skin(Rgb([127, 83, 58]));
         assert!(skin);
     }
 
@@ -590,9 +580,7 @@ mod tests {
 
     #[test]
     fn test_to_hsv_test() {
-        let hsv = to_hsv_test(Rgb {
-            data: [50, 100, 200],
-        });
+        let hsv = to_hsv_test(Rgb([50, 100, 200]));
 
         println!("hue={}, saturation={}, value={}", hsv.0, hsv.1, hsv.2);
         assert_eq!(hsv, (220.0, 0.5714285714285714, 116.66666666666666));
@@ -600,9 +588,7 @@ mod tests {
 
     #[test]
     fn test_to_normalized_rgb() {
-        let rgb = to_normalized_rgb(Rgb {
-            data: [50.0, 100.0, 200.0],
-        });
+        let rgb = to_normalized_rgb(Rgb([50.0, 100.0, 200.0]));
 
         println!("r={}, g={}, b={}", rgb.0, rgb.1, rgb.2);
         assert_eq!(
