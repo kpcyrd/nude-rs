@@ -10,10 +10,7 @@
 use image::DynamicImage;
 use image::GenericImage;
 use image::GenericImageView;
-// Re-enable this after rust 1.33.0 is more common
-// https://github.com/kpcyrd/sn0int/issues/89
-// use image::Pixel as _;
-use image::Pixel as ImagePixel;
+use image::Pixel as _;
 use image::Primitive;
 use image::Rgb;
 use image::Rgba;
