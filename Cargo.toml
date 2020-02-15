@@ -1,6 +1,6 @@
 [package]
 name = "nude"
-version = "0.2.0"
+version = "0.3.0"
 description = "High performance nudity detection"
 authors = ["kpcyrd <git@rxv.cc>"]
 license = "LGPL-3.0"
@@ -15,8 +15,8 @@ travis-ci = { repository = "kpcyrd/nude-rs" }
 [dependencies]
 failure = "0.1"
 log = "0.4"
-image = "0.22"
+image = "0.23"
 rand = "0.7"
 
 [dev-dependencies]
-env_logger = "0.6"
+env_logger = "0.7"
