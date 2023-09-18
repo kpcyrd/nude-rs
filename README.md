@@ -20,9 +20,9 @@ versions may tweak parameters but due to the complexity of this topic we can't
 provide actual support for false positives or negatives. You are welcome to
 discuss ideas in the issue tracker but you may have to write a patch yourself.
 
-The original implementation is based on [this paper][0].
+The original implementation is based on [this paper][0] (An Algorithm for Nudity Detection).
 
-[0]: https://sites.google.com/a/dcs.upd.edu.ph/csp-proceedings/Home/pcsc-2005/AI4.pdf?attredirects=0
+[0]: https://web.archive.org/web/20190415181208/https://be82ac79-a-aff4c786-s-sites.googlegroups.com/a/dcs.upd.edu.ph/csp-proceedings/Home/pcsc-2005/AI4.pdf?attachauth=ANoY7cqxudROUdZ3sxZE_dDeY3KTWsN11uK2Mmckptf80SlcKmzvqApC2yKu-snwCKqJSpmTRbO0-t-JhEzcKqPLy6NiHci5d1OwViFCm2yRIaNm2rcvASaH4neMXimlDis8hvW7VYZGWZ-feJyeu_cl-qeMScVOsVMET6yCRyjYT10nBgxmaa9SQXBke8rD0nHjlB4VgmpBbFd1ALxboziXyk6gNl70hqF6qho_ro3IqquNvFBEay4%3D&attredirects=0
 
 Please consider this library experimental.
 
